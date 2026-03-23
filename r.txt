@@ -1,1 +1,1 @@
-reset line2
+reset line1
