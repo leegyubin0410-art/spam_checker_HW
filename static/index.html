@@ -18,6 +18,13 @@
         function classify() {
             const text = document.getElementById("text").value;
 
+            // Issue
+            const result = document.getElementById("result");
+            if(!text){
+                result.innerText = "메시지를 입력해 주세요!";
+                return;
+            }
+
             fetch("/classify", {
                 method: "POST",
                 body: JSON.stringify({text})
